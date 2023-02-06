@@ -161,7 +161,7 @@ export const Minesweeper = React.memo(() => {
             />
             {boardStatus === "READY" && <MinesweeperPlaceholder />}
             {(boardStatus === "WIN" || boardStatus === "LOSE") && (
-              <MinesweeperRestart onClick={restartBoard} />
+              <MinesweeperRestart status={boardStatus} onClick={restartBoard} />
             )}
           </>
         )}
