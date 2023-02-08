@@ -166,6 +166,7 @@ export const useBoard = ({
 
     if (square.isMine) {
       onBoom && onBoom();
+      return;
     }
 
     if (square.isEmpty()) {

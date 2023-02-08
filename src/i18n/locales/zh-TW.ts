@@ -10,6 +10,7 @@ export default {
       tryAgain: "再試一次",
       youWin: "你贏了 🎉",
       youLose: "你輸了 🥲",
+      reset: "重設",
     },
   },
 };

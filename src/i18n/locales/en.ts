@@ -10,6 +10,7 @@ export default {
       tryAgain: "Try again",
       youWin: "You win 🎉",
       youLose: "You lose 🥲",
+      reset: "Reset",
     },
   },
 };

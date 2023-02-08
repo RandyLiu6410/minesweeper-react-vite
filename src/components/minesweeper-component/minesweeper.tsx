@@ -129,19 +129,16 @@ export const Minesweeper = React.memo(() => {
   return (
     <StyledMinesweeper>
       <MinesweeperHeader
-        levelSelector={
-          <MinesweeperLevelSelector
-            currentLevel={level}
-            levels={Object.keys(LEVEL_MAPS) as LEVEL[]}
-            onLevelChange={handleLevelChange}
-          />
-        }
-        record={
-          <MinesweeperRecord
-            remainingMineCount={remainingMineCount}
-            time={time}
-          />
-        }
+        levelSelectorProps={{
+          currentLevel: level,
+          levels: Object.keys(LEVEL_MAPS) as LEVEL[],
+          onLevelChange: handleLevelChange,
+        }}
+        recordProps={{
+          remainingMineCount: remainingMineCount,
+          time: time,
+        }}
+        onResetClick={restartBoard}
       />
       <Timer ref={timerRef} onTimeChange={handleTimerTimeChange} />
       <StyledBoardWrapper
