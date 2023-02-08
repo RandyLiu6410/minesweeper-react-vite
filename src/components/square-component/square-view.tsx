@@ -38,7 +38,7 @@ const StyledSquare = styled.div<StyledSquareProps>`
   }
 `;
 
-export interface SquareProps {
+export interface SquareViewProps {
   row: number;
   col: number;
   size: number;
@@ -48,7 +48,7 @@ export interface SquareProps {
   onDoubleClick?: (e: any, row: number, col: number) => void;
 }
 
-export const SquareView = React.memo<SquareProps>(
+export const SquareView = React.memo<SquareViewProps>(
   ({ row, col, size, square, onClick, onContextMenuClick, onDoubleClick }) => {
     const getValue = () => {
       if (!square) return null;
